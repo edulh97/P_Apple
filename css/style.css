@@ -1,0 +1,566 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-image: url("../img/prueba3.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-color: white;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container-cards {
+  margin-top: -100px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#header {
+  position: fixed;
+  width: 100vw;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+}
+
+#header i {
+  margin-left: 20px;
+  transform: translateY(1em);
+  color: rgb(0, 0, 0);
+  transition: transform 0.3s ease;
+}
+
+#header nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+
+#header nav a {
+  padding-bottom: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-family: 'Times New Roman', Times, serif;
+  transition: transform 0.3s ease;
+}
+
+#header nav a:hover {
+  transform: scale(1.5);
+}
+
+.phrase-container {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 10vh;
+  font-size: 20px;
+  color: rgb(102, 102, 107);
+}
+
+.colored {
+  color: rgb(0, 0, 0);
+}
+
+#side-menu {
+  left: -93vw;
+  position: fixed;
+  background-image: url("../img/dalle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 93vw;
+  height: 92vh;
+  z-index: 100;
+}
+
+#side-menu i {
+  margin-top: 1em;
+  margin-left: 1em;
+  color: rgb(255, 255, 255);
+}
+
+.side-menu-open {
+  transition: all 1s;
+  transform: translateX(93vw);
+}
+
+#side-menu nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(250, 250, 250);
+}
+
+#side-menu nav a {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 30px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+#side-menu nav a:hover {
+  text-decoration: underline;
+}
+
+.images-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 80vh;
+}
+
+.images-container img {
+  width: 40%;
+  height: auto;
+  margin-top: 30px;
+}
+
+.menu-image {
+  border-radius: 20px;
+  position: absolute;
+  right: -100%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: slideInFromRight 5s linear infinite;
+  animation-delay: calc(1s * var(--image-number));
+}
+
+.card-iphone {
+  display: flex;
+  width: 90vw;
+  margin-top: 15vh;
+  flex-direction: column;
+  background-image: url("../img/prueba.jpg");
+  background-repeat: no-repeat;
+  background-color: black;
+  border-radius: 18px;
+  flex: 100 0 0;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  justify-content: flex-end;
+}
+
+.card-iphone img {
+  margin-bottom: 0px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+.card-iphone h1 {
+  margin-top: 100px;
+  margin-left: 100px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.card-iphone h2 {
+  margin-top: 100px;
+  margin-left: 100px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+.card-iphone p {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 30px;
+  font-size: 80px;
+}
+
+.card-applewatch {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  width: 90vw;
+  margin-top: 15vh;
+  flex-direction: column;
+  border-radius: 18px;
+  flex: 100 0 0;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  justify-content: flex-end;
+}
+
+.card-applewatch img {
+  order: 2;
+  margin-bottom: 0px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+.card-applewatch h1 {
+  padding-top: 20px;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.card-applewatch p {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.card-applewatch ul {
+  list-style-type: none;
+  top: 40%;
+  left: 25%;
+  position: absolute;
+  color: rgb(250, 250, 250);
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.card-applewatch ul li {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.card-airpods {
+  display: flex;
+  width: 90vw;
+  margin-top: 15vh;
+  flex-direction: column;
+  background-color: rgb(250, 250, 250);
+  border-radius: 18px;
+  flex: 100 0 0;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  clear: both;
+}
+
+.card-airpods img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+.card-airpods h1 {
+  margin-top: 100px;
+  margin-left: 100px;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.card-airpods h2 {
+  margin-top: 100px;
+  margin-left: 100px;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.card-airpods p {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 100px;
+  font-size: 30px;
+}
+
+.card-ipad {
+  position: relative;
+  background-color: white;
+  display: flex;
+  width: 90vw;
+  min-width: 400px;
+  max-width: 800px;
+  min-height: 800px;
+  margin-top: 15vh;
+  flex-direction: column;
+  border-radius: 18px;
+  flex: 100 0 0;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.card-ipad img {
+  transform: rotate(30deg);
+  z-index: 1;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 28px;
+}
+
+.card-ipad h1 {
+  font-size: 4vw;
+  top: -200px;
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.card-ipad h2 {
+  font-size: 1.5vw;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.card-ipad p {
+  font-size: 2.5vw;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 0;
+  font-size: 30px;
+}
+
+.footer {
+  position: sticky;
+  width: 100vw;
+  height: 28px;
+  background-image: url("../img/apples.png");
+  background-color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+}
+
+.footer nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  color: rgb(255, 255, 255);
+}
+
+.footer nav a {
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  padding: 5px 10px;
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.footer nav a:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+
+}
+
+/*--------------------------------------------*/
+@media only screen and (min-width: 600px) {
+
+  .card-iphone,
+  .card-airpods,
+  .card-applewatch {
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #side-menu nav {
+    display: block;
+  }
+
+  #side-menu nav a {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .header nav a {
+    font-size: 0.8em;
+  }
+
+  .card-iphone h1,
+  .card-iphone h2,
+  .card-airpods h1,
+  .card-airpods h2 {
+    margin-left: 50px;
+    font-size: 16px;
+  }
+
+  .card-iphone p,
+  .card-airpods p {
+    font-size: 60px;
+  }
+}
+
+/*-----------------------------------------------*/
+@media only screen and (max-width: 768px) {
+  #header nav a {
+    display: none;
+  }
+
+  .footer nav {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15px;
+  }
+
+  .footer nav a {
+    margin: 5px 0;
+  }
+
+  .footer {
+    position: relative;
+  }
+
+  .card-applewatch,
+  .card-airpods {
+    flex: 0 0 100%;
+  }
+}
+
+/*------------------------------------------------*/
+@media only screen and (min-width: 768px) {
+
+  .card-iphone,
+  .card-applewatch,
+  .card-airpods {
+    width: 30vw;
+  }
+}
+
+/*------------------------------------------------*/
+@media only screen and (min-width: 900px) {
+
+  .card-iphone,
+  .card-applewatch,
+  .card-airpods {
+    width: 22vw;
+  }
+}
+
+/*------------------------------------------------*/
+@media only screen and (min-width: 1200px) {
+
+  .card-iphone,
+  .card-airpods,
+  .card-applewatch {
+    width: 18vw;
+  }
+}
+
+/*------------------------------------------------*/
+@media only screen and (max-width: 900px) {
+  .header nav a {
+    font-size: 1em;
+  }
+
+  .card-iphone h1,
+  .card-iphone h2,
+  .card-airpods h1,
+  .card-airpods h2 {
+    font-size: 18px;
+  }
+
+  .card-iphone p,
+  .card-airpods p {
+    font-size: 70px;
+  }
+
+  .card-iphone h1,
+  .card-iphone h2,
+  .card-airpods h1,
+  .card-airpods h2 {
+    font-size: 18px;
+  }
+
+  .card-iphone p,
+  .card-airpods p {
+    font-size: 50px;
+  }
+
+  .card-iphone h1,
+  .card-iphone h2,
+  .card-airpods h1,
+  .card-airpods h2 {
+    margin-left: 30px;
+    margin-top: 50px;
+  }
+
+  .card-iphone p,
+  .card-airpods p {
+    margin-left: 20px;
+  }
+
+  .card-iphone,
+  .card-airpods {
+    overflow: hidden;
+  }
+
+  #side-menu nav {
+    display: block;
+  }
+
+  #side-menu nav a {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  #macair-image {
+    order: 1;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+
+  .card-iphone h1,
+  .card-iphone h2,
+  .card-airpods h1,
+  .card-airpods h2 {
+    font-size: 18px;
+    margin-left: 25px;
+    margin-top: 45px;
+  }
+
+  .card-iphone p,
+  .card-airpods p {
+    font-size: 45px;
+    margin-left: 15px;
+  }
+
+  .card-iphone,
+  .card-airpods {
+    padding: 15px;
+    overflow: hidden;
+  }
+}
